@@ -24,6 +24,10 @@ Route::get('/', function () {
     ]);
 });
 
+
+Route::get('/admin', function(){
+    return Inertia::render('Admin/Index');
+});
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
