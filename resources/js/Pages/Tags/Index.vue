@@ -103,7 +103,9 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="m-2 p-2">links</div>
+                            <div class="m-2 p-2">
+                                <Pagination :links="tags.links" />
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -116,11 +118,13 @@
 import { defineComponent } from "vue";
 import AdminLayout from "../../Layouts/AdminLayout.vue";
 import { Link } from "@inertiajs/inertia-vue3";
+import Pagination from "../../Components/Pagination.vue";
 
 export default defineComponent({
     components: {
         AdminLayout,
         Link,
+        Pagination,
     },
     props: {
         tags: Object,
